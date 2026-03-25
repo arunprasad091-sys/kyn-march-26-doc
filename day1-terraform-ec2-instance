@@ -1,0 +1,34 @@
+##using terraform we will create an ec2 instance and look into the workflow
+  ##lets create a folder in the desktop
+  #3open visual studio code click on file select desktop and open folder. 
+  #click on the + icon give the file name as provider.tf
+  #the provider is aws 
+  #inside the provider.tf file add this 
+  ##using terraform we will create instance in aaws
+
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 6.0" 
+    }
+  }
+}
+
+# Configure the AWS Provider
+provider "aws" {
+  region = "us-east-1"
+}
+
+###now lets create the ec2 instance i will create a new file 
+  ec2.tf
+  ###inside this file add line number 26 till 30
+  resource "aws_instance" "ec2" {
+  ami                     = "ami-0dcc1e21636832c5d"
+  instance_type           = "t2.micro"
+  
+}
+
+#then do
+  terraform init
+  ##this will create a .terraform folder inside that it will download the plugin
