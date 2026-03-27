@@ -8,3 +8,7 @@
   terraform.tfstate.backup
   .terraform.lock.hcl
   ###then go to amazon search for s3
+#give a unique name to your bucket and enable versioing
+##once done open dynamodb
+create a table
+primary key need to be define LockID
