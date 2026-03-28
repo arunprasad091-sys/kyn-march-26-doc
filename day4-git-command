@@ -1,0 +1,28 @@
+  500  mkdir project
+  501  rm -rf project
+  502  mkdir project
+  503  cd project
+    #touch command is used to create blank file
+  504  touch DS_Store
+  505  touch calcy.py
+  506  touch auth
+  507  touch secret
+  508  ls
+    #we are going to create global variables you can change the name and email id to your name and email id 
+  509  git config --global user.name "gopal"
+  510  git config --global user.email "gopal1409@gmail.com"
+  511  git config --global list
+  512  git config --global --list
+#inside the folder if i run git status this will show that git is not managing the code
+    514  git status
+    #git init will create a .git folder which like an versioing database for git 
+518  git init
+  519  ls -la
+  520  ls -la .git
+  521  git status
+    #if i delete the git folder i ll loose all the versioing information
+  522  rm -rf .git
+  523  git status
+    #lets re instialzied it 
+  524  git init
+    ################################
