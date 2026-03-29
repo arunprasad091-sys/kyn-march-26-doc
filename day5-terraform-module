@@ -1,0 +1,21 @@
+###we have already uploaded the code in version control system
+  ##on your desktop create a new folder terraform-module
+  ###open visual studio code 
+  #file openfolder and select desktop select terraform-module folder
+  ##inside that create a new file called as project.tf
+  module "project" {
+  #this module required a source 
+  source = "github.com/gopal1409/kyn-terraform-cloud-march26" #modify this github with your own github remove https and remove .git from the end
+region = "us-east-1"
+vpc_cidr = "172.0.0.0/16"
+azs = ["us-east-1a", "us-east-1b"]
+subnet_cidrs = ["172.0.1.0/24", "172.0.2.0/24"]
+allowed_ingress_ports = [80]
+allowed_alb_ingress_ports = [80]
+allowed_alb_cidr_blocks = ["0.0.0.0/0"]
+}
+
+#after this do 
+  terraform init
+  terraform plan
+  terraform apply
